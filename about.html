@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Dropdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<style>
+    header {
+        position: relative;
+        padding: 15px;
+        background-color: #262626;
+    }
+
+    .mega-menu {
+        width: calc(100% - 2em);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #1D1C1C;
+        padding: 1em;
+        margin-left: 1em;
+        visibility: hidden;
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: all .3s linear;
+        z-index: 10;
+    }
+
+    ._dropdown:hover .mega-menu {
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .mega-menu i {
+        padding-left: 30px;
+        font-size: 35px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        color: #F24D2B;
+    }
+
+    .mega-menu .drop {
+        background-color: #2E2E2E;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        border-radius: 5px;
+        color: #F24D2B;
+
+    }
+
+    .mega-menu h5 {
+        color: white;
+        padding-top: 20px;
+    }
+
+    .mega-menu ul {
+        list-style: none;
+    }
+
+    .mega-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+    }
+
+
+    .mega-menu .creating {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .mega-menu .creating h4 {
+        color: white;
+        padding-top: 10px;
+    }
+
+    .mega-menu .creating img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .creating img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .mega-menu .creating button {
+        padding: 15px 30px;
+        background-color: #2E2E2E;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        color: #F24D2B;
+    }
+
+    .mega-menu .creating {
+        padding-right: 20px;
+    }
+
+    .mega-menu .creating h3 {
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .mega-menu .creating p {
+        color: white;
+        padding-top: 5px;
+        text-transform: lowercase;
+    }
+
+    .mega-menu .creating .Nullam {
+        text-align: center;
+    }
+
+    .mega-menu .creating .Nullam p {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-transform: lowercase;
+    }
+
+    .Nullam i {
+        color: #F24D2B;
+        font-size: 60px;
+    }
+</style>
+
+<body style="background-color: black;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #262626;">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                        <li class="nav-item _dropdown">
+                            <a class="nav-link" href="#" style="color: white; font-weight: 600;">
+                                Home +
+                            </a>
+
+                            <div class="mega-menu">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa-solid fa-photo-film"></i>
+                                        <ul>
+                                            <a href="#" class="drop">Home-1</a>
+                                            <h5>Images Genartor</h5>
+                                            <li><a href="Home">Create realistic</a></li>
+                                            <li><a href="Home">images with this</a></li>
+                                            <li><a href="Home">AI software tool</a></li>
+                                            <li><a href="Home">at least time. </a></li> </a>
+                        </li>
+                        <h5>Click Here For RTL Demos</h5>
+                    </ul>
+                </div>
+                <div class="col-2">
+
+                    <i class="fa-solid fa-photo-film"></i>
+                    <ul>
+                        <a href="#" class="drop">Home-1</a>
+                        <h5>Images Genartor</h5>
+                        <li><a href="Home">Create realistic</a></li>
+                        <li><a href="Home">images with this</a></li>
+                        <li><a href="Home">AI software tool</a></li>
+                        <li><a href="Home">at least time. </a></li> </a></li>
+                        <h5>Click Here For RTL Demos</h5>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <ul>
+                        <a href="#" class="drop">Home-1</a>
+                        <h5>Images Genartor</h5>
+                        <li><a href="Home">Create realistic</a></li>
+                        <li><a href="Home">images with this</a></li>
+                        <li><a href="Home">AI software tool</a></li>
+                        <li><a href="Home">at least time. </a></li> </a></li>
+                        <h5>Click Here For RTL Demos</h5>
+                    </ul>
+
+                </div>
+                <div class="col-2">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <ul>
+                        <a href="#" class="drop">Home-1</a>
+                        <h5>Images Genartor</h5>
+                        <li><a href="Home">Create realistic</a></li>
+                        <li><a href="Home">images with this</a></li>
+                        <li><a href="Home">AI software tool</a></li>
+                        <li><a href="Home">at least time. </a></li> </a></li>
+                        <h5>Click Here For RTL Demos</h5>
+                    </ul>
+                </div>
+                <div class="col-2 ">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <ul>
+                        <a href="#" class="drop">Home-1</a>
+                        <h5>Images Genartor</h5>
+                        <li><a href="Home">Create realistic</a></li>
+                        <li><a href="Home">images with this</a></li>
+                        <li><a href="Home">AI software tool</a></li>
+                        <li><a href="Home">at least time. </a></li> </a></li>
+                        <h5>Click Here For RTL Demos</h5>
+                    </ul>
+                </div>
+                <div class="col-2 b">
+                    <i class="fa-solid fa-photo-film"></i>
+                    <ul>
+                        <a href="#" class="drop">Home-1</a>
+                        <h5>Images Genartor</h5>
+                        <li><a href="Home">Create realistic</a></li>
+                        <li><a href="Home">images with this</a></li>
+                        <li><a href="Home">AI software tool</a></li>
+                        <li><a href="Home">at least time. </a></li> </a></li>
+                        <h5>Click Here For RTL Demos</h5>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </li>
+            <li class="nav-item _dropdown">
+                <a class="nav-link" href="#" style="color: white; font-weight: 600;">
+                    Services +
+                </a>
+
+                <div class="mega-menu">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="creating">
+                                <img src="images/robot3.jpg" alt="">
+                                <h4>creating A Chat bots</h4>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="creating">
+                                <img src="images/robot4.jpg" alt="">
+                                <h4>Automation Robots</h4>
+
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="creating" style="background-color: #262424; padding-bottom:1em;
+                            padding-left: 20px;
+                            ">
+                                <button>EXPLORE</button>
+                                <h3>To Explore More Services</h3>
+                                <div class="Nullam" style="background-image: url(images/robot5.jpg);height: 200px; ">
+                                    <i class="fa-brands fa-apple"></i>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam
+                                        temporibus nihil a laborum earum.</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eius eveniet, odio amet
+                                    delectus sequi pariatur perspiciatis culpa! Ratione mollitia iste perferendis sequi
+                                    cupiditate nulla.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="nav-item _dropdown">
+                <a class="nav-link" href="#" style="color: white; font-weight: 600;">
+                    Inner Page +
+                </a>
+
+                <div class="mega-menu">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-photo-film"></i>
+                            <ul>
+                                <a href="#" class="drop">Home-1</a>
+                                <h5>Images Genartor</h5>
+                                <li><a href="Home">Create realistic</a></li>
+                                <li><a href="Home">images with this</a></li>
+                                <li><a href="Home">AI software tool</a></li>
+                                <li><a href="Home">at least time. </a></li> </a>
+            </li>
+            <h5>Click Here For RTL Demos</h5>
+            </ul>
+            </div>
+            <div class="col-2">
+
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            <div class="col-2">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+
+            </div>
+            <div class="col-2">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            <div class="col-2 ">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            <div class="col-2 b">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            </div>
+            </div>
+            </li>
+
+
+
+            <li class="nav-item _dropdown">
+                <a class="nav-link" href="#" style="color: white; font-weight: 600;">
+                    Articles +
+                </a>
+
+                <div class="mega-menu">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="creating">
+                                <img src="images/robot3.jpg" alt="">
+                                <h4>creating A Chat bots</h4>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="creating">
+                                <img src="images/robot4.jpg" alt="">
+                                <h4>Automation Robots</h4>
+
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="creating" style="background-color: #262424; padding-bottom:1em;
+                padding-left: 20px;
+                ">
+                                <button>EXPLORE</button>
+                                <h3>To Explore More Services</h3>
+                                <div class="Nullam" style="background-image: url(images/robot5.jpg);height: 200px; ">
+                                    <i class="fa-brands fa-apple"></i>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam
+                                        temporibus nihil a laborum earum.</p>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eius eveniet, odio amet
+                                    delectus sequi pariatur perspiciatis culpa! Ratione mollitia iste perferendis sequi
+                                    cupiditate nulla.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+
+
+            <li class="nav-item _dropdown">
+                <a class="nav-link" href="#" style="color: white; font-weight: 600;">
+                    Store +
+                </a>
+
+                <div class="mega-menu">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fa-solid fa-photo-film"></i>
+                            <ul>
+                                <a href="#" class="drop">Home-1</a>
+                                <h5>Images Genartor</h5>
+                                <li><a href="Home">Create realistic</a></li>
+                                <li><a href="Home">images with this</a></li>
+                                <li><a href="Home">AI software tool</a></li>
+                                <li><a href="Home">at least time. </a></li> </a>
+            </li>
+            <h5>Click Here For RTL Demos</h5>
+            </ul>
+            </div>
+            <div class="col-2">
+
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            <div class="col-2">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+
+            </div>
+            <div class="col-2">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            <div class="col-2 ">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            <div class="col-2 b">
+                <i class="fa-solid fa-photo-film"></i>
+                <ul>
+                    <a href="#" class="drop">Home-1</a>
+                    <h5>Images Genartor</h5>
+                    <li><a href="Home">Create realistic</a></li>
+                    <li><a href="Home">images with this</a></li>
+                    <li><a href="Home">AI software tool</a></li>
+                    <li><a href="Home">at least time. </a></li> </a></li>
+                    <h5>Click Here For RTL Demos</h5>
+                </ul>
+            </div>
+            </div>
+            </div>
+            </li>
+
+            </ul>
+            <div class="logo">
+                <img src="images/logo.svg" alt="" style="width: 90%; height: 90%; cursor: pointer;" >
+            </div>
+        </div>  
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section class="home-slider1">
+        <div class="slider-content">
+            <div class="partner">
+                    <h1>224+</h1>
+                    <div class="partner1">
+                        <div class="partner2">91%</div>
+                    </div>
+                    
+            </div>
+
+            <div class="partner">
+               <h4>Partners</h4>
+                    <div class="partner2"><h3>Productivity</h3><br>
+                        <p>Fusce a lectus</p></div>
+                
+        </div>
+        <div class="partner">
+            <h1>92%</h1>
+            <div class="partner1">
+                <div class="partner2">70%</div>
+            </div>
+            
+    </div>
+
+    <div class="partner">
+       <h4>
+        Faster <br>
+        Technology        
+       </h4>
+            <div class="partner2"><h3>Innovative</h3><br>
+                <p>Fusce a lectus</p></div>         
+        
+</div>
+
+<div class="utilise">
+    <div class="utilise1">
+        <div class="circle1">
+            <img src="images/cir1.webp" alt="">
+        </div>
+        <div class="circle1">
+            <img src="images/cir2.webp" alt="">
+        </div>
+    </div> 
+    <h1>Utilise Artificial <span>Intelligence <br>To</span> View <span>The World</span>  </h1>
+    <div class="connectivity">
+        <div class="connectivity1">80%</div>
+    </div>
+</div> 
+        </div>
+        <video  loop="true" autoplay="autoplay" muted>
+            <source src="./images/almax.webm">
+          </video>
+    </section>
+</body>
+
+</html>
